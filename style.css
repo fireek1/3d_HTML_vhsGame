@@ -39,22 +39,14 @@ body {
     width: 300px;
     height: 300px;
     border: 1px solid black;
-    background-color: rgb(255, 161, 46);
+    /* background-color: rgb(255, 161, 46); */
+    background-image: url('side.jpg');
+    background-size: contain;
     /* backface-visibility: hidden; */
 }
 
 .front {
     transform: translateZ(1500px);
-}
-
-.back {
-    transform: rotateY(180deg) translateZ(1500px);
-    width: 300px;
-    height: 300px;
-    background:
-        linear-gradient(to right, rgb(95, 58, 13) 0%, rgb(95, 58, 13) 50px, transparent 50px, transparent 248px, rgb(95, 58, 13) 248px, rgb(95, 58, 13) 300px),
-        linear-gradient(to bottom, rgb(95, 58, 13) 0%, rgb(95, 58, 13) 50px, transparent 50px, transparent 250px, rgb(95, 58, 13) 250px, rgb(95, 58, 13) 300px);
-
 }
 
 .left {
@@ -158,6 +150,10 @@ body {
 
 .sfront {
     transform: rotateY(90deg) translate3d(0, 300px, -50px);
+    background-image: url('house-front.jpg');
+    background-size: cover;
+    background-position: 50% -42px;
+    background-size: 426px;
 }
 
 .sback {
@@ -218,4 +214,16 @@ body {
 }
 
 
-
+.subs {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    font-family: 'vhs';
+    font-size: 70px;
+    letter-spacing: -3px;
+    z-index: 0;
+}
