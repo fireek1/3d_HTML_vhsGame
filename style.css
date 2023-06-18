@@ -1,0 +1,221 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'vhs';
+    src: url(vhs.ttf);
+}
+
+body {
+    background-color: rgb(80, 80, 80);
+    cursor: none;
+    background-image: url(sky.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+.scene {
+    position: relative;
+    margin: 200px auto;
+    width: 300px;
+    height: 300px;
+    perspective: 500px;
+}
+
+.cube {
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+    display: flex;
+    transform-origin: 50% 50% 500px;
+}
+
+.side {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    background-color: rgb(255, 161, 46);
+    /* backface-visibility: hidden; */
+}
+
+.front {
+    transform: translateZ(1500px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(1500px);
+    width: 300px;
+    height: 300px;
+    background:
+        linear-gradient(to right, rgb(95, 58, 13) 0%, rgb(95, 58, 13) 50px, transparent 50px, transparent 248px, rgb(95, 58, 13) 248px, rgb(95, 58, 13) 300px),
+        linear-gradient(to bottom, rgb(95, 58, 13) 0%, rgb(95, 58, 13) 50px, transparent 50px, transparent 250px, rgb(95, 58, 13) 250px, rgb(95, 58, 13) 300px);
+
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(1500px);
+    width: 3000px;
+    display: flex;
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(-1200px);
+    width: 3000px;
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(1500px);
+    height: 3000px;
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(-1200px);
+    height: 3000px;
+}
+
+.window {
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    margin: 50px auto;
+    background-color: rgba(255, 125, 125, 0.37);
+}
+
+.road {
+    background-image: url(road.jpg);
+    background-size: contain;
+    width: 750px;
+    height: 10000px;
+    transform: rotateX(90deg) translateY(-6500px) translateZ(4700px);
+}
+
+.pyramid {
+    transform-style: preserve-3d;
+    transform: translate3d(100px, -300px, -3000px) rotateY(90deg);
+}
+
+
+
+.par {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 300px solid #732222;
+}
+
+.par-front {
+    transform-origin: 50% 100%;
+    transform: translate3d(0, 44px, -120px) ;
+    border-bottom: 256px solid #732222;
+}
+
+.par-back {
+    transform-origin: 50% 100%;
+    transform: translate3d(0, 44px, 120px) ;
+    border-bottom: 256px solid #732222;
+}
+
+.par-right {
+    transform-origin: 50% 100%;
+    transform: translateX(150px) rotateZ(-30deg) rotateY(90deg);
+    border-image: url(roof.jpg);
+}
+
+.par-left {
+    transform-origin: 50% 100%;
+    transform: translateX(-150px) rotateZ(30deg) rotateY(-90deg);    
+    border-image: url(roof.jpg);
+}
+
+.par-bottom {
+    width: 300px;
+    height: 300px;
+    background-color: #732222;
+    border: none;
+    transform: rotateX(-90deg) translateZ(150px);
+    
+}
+
+.house {
+    width: 200px;
+}
+
+
+.sleft {
+    transform: translate3d(50px, 300px, 100px);
+}
+
+.sright {
+    transform: translate3d(50px, 300px, -100px);
+}
+
+.sfront {
+    transform: rotateY(90deg) translate3d(0, 300px, -50px);
+}
+
+.sback {
+    transform:  rotateY(90deg) translate3d(0, 300px, 150px);
+}
+
+
+.ui {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+    z-index: 1;
+    display: flex;
+}
+
+.slides {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+/* .slides_left {
+    top: 0;
+    left: 0;
+}
+
+.slides_right {
+    top: 0;
+    right: 0;
+} */
+
+.vhs_play {  
+    color: white;
+    margin: 100px;
+    font-family: 'vhs';
+    font-size: 75px;
+}
+
+.overlay {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.move {
+    position: absolute;
+    transform: translate3d(-85px, -210px, -3200px);
+    width: 100%;
+    height: 100%;
+}
+
+
+
