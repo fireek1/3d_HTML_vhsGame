@@ -6,14 +6,15 @@
 
 @font-face {
     font-family: 'vhs';
-    src: url(vhs.ttf);
+    src: url(../fonts/vhs.ttf);
 }
 
 body {
     background-color: rgb(80, 80, 80);
     cursor: none;
-    background-image: url(sky.jpg);
+    background-image: url(../textures/sky.webp);
     background-size: cover;
+    background-repeat: no-repeat;
     overflow: hidden;
     position: relative;
 }
@@ -29,6 +30,7 @@ body {
 .cube {
     width: inherit;
     height: inherit;
+    position: absolute;
     transform-style: preserve-3d;
     display: flex;
     transform-origin: 50% 50% 500px;
@@ -40,7 +42,7 @@ body {
     height: 300px;
     border: 1px solid black;
     /* background-color: rgb(255, 161, 46); */
-    background-image: url('side.jpg');
+    background-image: url(../textures/side.webp);
     background-size: contain;
     /* backface-visibility: hidden; */
 }
@@ -79,16 +81,36 @@ body {
 }
 
 .road {
-    background-image: url(road.jpg);
+    background-image: url(../textures/road.webp);
     background-size: contain;
-    width: 750px;
+    width: 300px;
     height: 10000px;
     transform: rotateX(90deg) translateY(-6500px) translateZ(4700px);
 }
 
+/* .grass {
+    background-image: url(../textures/grass2.webp);
+    background-size: contain;
+    width: 10000px;
+    height: 10000px;
+    transform: rotateX(90deg) translateY(-1500px) translateZ(4699px) translateX(-5000px);
+    background-size: 300px;
+}  */
+
 .pyramid {
     transform-style: preserve-3d;
-    transform: translate3d(100px, -300px, -3000px) rotateY(90deg);
+}
+
+.pyramid-1 {
+    transform: translate3d(250px, -300px, -3000px) rotateY(0deg);
+}
+
+.pyramid-2 {
+    transform: translate3d(50px, -300px, -3000px) rotateY(180deg);
+}
+
+.pyramid-3 {
+    transform: translate3d(250px, -300px, -3500px) rotateY(0deg);
 }
 
 
@@ -117,13 +139,13 @@ body {
 .par-right {
     transform-origin: 50% 100%;
     transform: translateX(150px) rotateZ(-30deg) rotateY(90deg);
-    border-image: url(roof.jpg);
+    border-image: url(../textures/roof.webp);
 }
 
 .par-left {
     transform-origin: 50% 100%;
     transform: translateX(-150px) rotateZ(30deg) rotateY(-90deg);    
-    border-image: url(roof.jpg);
+    border-image: url(../textures/roof.webp);
 }
 
 .par-bottom {
@@ -150,7 +172,7 @@ body {
 
 .sfront {
     transform: rotateY(90deg) translate3d(0, 300px, -50px);
-    background-image: url('house-front.jpg');
+    background-image: url(../textures/house-front.webp);
     background-size: cover;
     background-position: 50% -42px;
     background-size: 426px;
@@ -190,13 +212,6 @@ body {
     right: 0;
 } */
 
-.vhs_play {  
-    color: white;
-    margin: 100px;
-    font-family: 'vhs';
-    font-size: 75px;
-}
-
 .overlay {
     /* position: absolute; */
     top: 0;
@@ -226,4 +241,8 @@ body {
     font-size: 70px;
     letter-spacing: -3px;
     z-index: 0;
+}
+
+.d3 {
+    position: absolute
 }
