@@ -12,7 +12,7 @@
 body {
     background-color: rgb(80, 80, 80);
     cursor: none;
-    background-image: url(../textures/sky.webp);
+    background-image: url(../textures/sky.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -42,7 +42,8 @@ body {
     height: 300px;
     border: 1px solid black;
     /* background-color: rgb(255, 161, 46); */
-    background-image: url(../textures/side.webp);
+    /* background-image: url(../textures/side.jpg); */
+    background-color: yellow;
     background-size: contain;
     /* backface-visibility: hidden; */
 }
@@ -72,30 +73,22 @@ body {
     height: 3000px;
 }
 
-.window {
-    width: 200px;
-    height: 200px;
-    border: 3px solid black;
-    margin: 50px auto;
-    background-color: rgba(255, 125, 125, 0.37);
-}
-
 .road {
-    background-image: url(../textures/road.webp);
+    background-image: url(../textures/road.jpg);
     background-size: contain;
     width: 300px;
-    height: 10000px;
-    transform: rotateX(90deg) translateY(-6500px) translateZ(4700px);
+    height: 15000px;
+    transform: rotateX(90deg) translateY(-6500px) translateZ(7200px);
 }
 
-/* .grass {
+.grass {
     background-image: url(../textures/grass2.webp);
     background-size: contain;
     width: 10000px;
     height: 10000px;
     transform: rotateX(90deg) translateY(-1500px) translateZ(4699px) translateX(-5000px);
     background-size: 300px;
-}  */
+} 
 
 .pyramid {
     transform-style: preserve-3d;
@@ -139,13 +132,13 @@ body {
 .par-right {
     transform-origin: 50% 100%;
     transform: translateX(150px) rotateZ(-30deg) rotateY(90deg);
-    border-image: url(../textures/roof.webp);
+    border-image: url(../textures/roof.jpg);
 }
 
 .par-left {
     transform-origin: 50% 100%;
     transform: translateX(-150px) rotateZ(30deg) rotateY(-90deg);    
-    border-image: url(../textures/roof.webp);
+    border-image: url(../textures/roof.jpg);
 }
 
 .par-bottom {
@@ -172,7 +165,7 @@ body {
 
 .sfront {
     transform: rotateY(90deg) translate3d(0, 300px, -50px);
-    background-image: url(../textures/house-front.webp);
+    /* background-image: url(../textures/house-front.jpg); */
     background-size: cover;
     background-position: 50% -42px;
     background-size: 426px;
@@ -190,8 +183,8 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0);
-    backdrop-filter: blur(0px);
     z-index: 1;
+    backdrop-filter: blur(0px) brightness(1.25);
     display: flex;
 }
 
@@ -210,6 +203,10 @@ body {
 .slides_right {
     top: 0;
     right: 0;
+} */
+
+/* .slides {
+    opacity: 0;
 } */
 
 .overlay {
@@ -244,5 +241,49 @@ body {
 }
 
 .d3 {
+    transform-style: preserve-3d;
     position: absolute
+}
+
+.eye {
+    width: 100px;
+    height: 75px;
+    transform: translate3d(1px, 1px, 1px) rotateX(0deg) rotateY(0deg);
+}
+
+.tv {
+    background-color: rgb(143, 143, 143);
+    width: 100px;
+    height: 100px;
+}
+
+.tvback {
+    transform: translateZ(50px);
+}
+
+.tvbottom {
+    transform: rotateX(90deg) translateZ(-50px);
+}
+
+.tvt {
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.tvr {
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+.tvl {
+    transform: rotateZ(90deg) translateZ(-50px);
+}
+
+.tv-video {
+    width: 100px;
+    height: 100px;
+    transform: rotateY(90deg) translateZ(-30px);
+}
+
+.television {
+    scale: 2;
+    transform: translate3d(49px, 75px, 1048px) rotateY(270deg);
 }
