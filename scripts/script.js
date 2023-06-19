@@ -3,6 +3,7 @@ const scene = document.querySelector('.scene')
 const ui = document.querySelector('.ui')
 const pyramid = document.querySelector('.pyramid')
 const enemy = document.querySelector('.eye')
+const grass = document.querySelector('.grass')
 
 let translateZ = 0
 let translateX = 0
@@ -121,6 +122,8 @@ function moveChatacter() {
     }
 }
 
+let coverEye = 0
+
 document.onkeydown = (e) => {
     if (e.code === 'KeyW' || e.code === 'KeyA' || e.code === 'KeyS' || e.code === 'KeyD') {
         isMoving = true
@@ -199,7 +202,7 @@ function random(min, max) {
 //     document.querySelector('.cube').appendChild(newEnemy)
 //     const enemyX = random(translateX - 2000, translateX + 2000)
 //     const enemyZ = random(translateZ - 2000, translateZ + 2000)
-    
+
 //     deltaX = translateX - enemyX
 //     deltaZ = translateZ - enemyZ
 
@@ -212,9 +215,27 @@ function random(min, max) {
 //     newEnemy.style.scale = '0.1'
 //     enemyCount++
 //     console.log(enemyZ)
-    
+
 // }
 
 // setInterval(() => {
 //     enemy
 // })
+
+
+function spawnEnemy() {
+    const newEnemy = enemy.cloneNode(true);
+    ui.appendChild(newEnemy)
+    newEnemy.style.left = `${random(25, 75)}%`
+    newEnemy.style.top = `${random(0, 100)}%`
+    newEnemy.style.scale = `${random(0.5, 3)}`
+    newEnemy.style.opacity = `1`
+    grass.style.height = `100000px`
+}
+
+setInterval(() => {
+    if (cover >= 1) {
+        spawnEnemy()
+    }
+    // console.log('hi')
+}, 1000)

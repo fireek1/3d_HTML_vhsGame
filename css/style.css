@@ -84,9 +84,9 @@ body {
 .grass {
     background-image: url(../textures/grass2.webp);
     background-size: contain;
-    width: 10000px;
-    height: 10000px;
-    transform: rotateX(90deg) translateY(-1500px) translateZ(4699px) translateX(-5000px);
+    width: 6000px;
+    height: 12000px;
+    transform: rotateX(90deg) translateY(-1500px) translateZ(5699px) translateX(-3000px);
     background-size: 300px;
 } 
 
@@ -95,18 +95,36 @@ body {
 }
 
 .pyramid-1 {
-    transform: translate3d(250px, -300px, -3000px) rotateY(0deg);
+    transform: translate3d(-1000px, -300px, 2000px) rotateY(0deg);
 }
 
 .pyramid-2 {
-    transform: translate3d(50px, -300px, -3000px) rotateY(180deg);
+    transform: translate3d(-2000px, -300px, -2000px) rotateY(180deg);
 }
 
 .pyramid-3 {
-    transform: translate3d(250px, -300px, -3500px) rotateY(0deg);
+    transform: translate3d(800px, -300px, -4500px) rotateY(90deg);
 }
 
+.pyramid-4 {
+    transform: translate3d(1200px, -300px, -3312px) rotateY(18deg);
+}
 
+.pyramid-5 {
+    transform: translate3d(-1300px, -300px, -500px) rotateY(0deg);
+}
+
+.pyramid-6 {
+    transform: translate3d(700px, -300px, 2000px) rotateY(45deg);
+}
+
+.pyramid-7 {
+    transform: translate3d(2000px, -300px, -1000px) rotateY(77deg);
+}
+
+.pyramid-8 {
+    transform: translate3d(-1700px, -300px, -4000px) rotateY(0deg);
+}
 
 .par {
     position: absolute;
@@ -220,9 +238,24 @@ body {
 
 .move {
     position: absolute;
+    width: 200px;
+    height: 500px;
+}
+
+.move-1 {
     transform: translate3d(-85px, -210px, -3200px);
-    width: 100%;
-    height: 100%;
+}
+
+.move-2 {
+    transform: translate3d(-1000px, -210px, -1000px) rotateY(37deg);
+}
+
+.move-3 {
+    transform: translate3d(1000px, -210px, 1000px) rotateY(198deg);
+}
+
+.move-4 {
+    transform: translate3d(1000px, -210px, -3700px) rotateY(300deg);
 }
 
 
@@ -245,11 +278,11 @@ body {
     position: absolute
 }
 
-.eye {
+/* .eye {
     width: 100px;
     height: 75px;
     transform: translate3d(1px, 1px, 1px) rotateX(0deg) rotateY(0deg);
-}
+} */
 
 .tv {
     background-color: rgb(143, 143, 143);
@@ -286,4 +319,14 @@ body {
 .television {
     scale: 2;
     transform: translate3d(49px, 75px, 1048px) rotateY(270deg);
+}
+
+.eye {
+    position: absolute;
+    width: 120px;
+    height: 75px;
+    opacity: 0;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
 }
